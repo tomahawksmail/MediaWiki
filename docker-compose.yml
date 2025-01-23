@@ -1,1 +1,19 @@
-version: "3.8"
+version: '3'
+services:
+  mediawiki:
+    image: mediawiki
+    restart: always
+    ports:
+      - 5546:80
+    environment:
+      MW_DB_HOST: ${MW_DB_HOST}
+      MW_DB_NAME: ${MW_DB_NAME}
+      MW_DB_USER: ${MW_DB_USER}
+      MW_DB_PASSWORD: ${MW_DB_PASSWORD}
+    volumes:
+      - images:/var/www/html/images
+      # Uncomment the following line after initial setup:
+      # - ./LocalSettings.php:/var/www/html/LocalSettings.php
+
+volumes:
+  images:
