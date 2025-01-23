@@ -5,9 +5,9 @@ services:
     image: mediawiki:latest
     deploy:
       replicas: 3
-#      placement:
-#        constraints:
-#          - node.hostname == masterswarm
+      placement:
+        constraints:
+          - node.hostname == masterswarm
       resources:
         limits:
           cpus: "1"
