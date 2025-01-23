@@ -2,6 +2,15 @@ version: '3'
 services:
   mediawiki:
     image: mediawiki:latest
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == masterswarm
+      resources:
+        limits:
+          cpus: "1"
+          memory: "512M"
     restart: always
     ports:
       - 5546:80
