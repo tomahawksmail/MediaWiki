@@ -6,7 +6,7 @@ services:
     ports:
       - 5546:80
     networks:
-      - hesk-net
+      - wiki_net
     environment:
       MW_DB_HOST: ${MW_DB_HOST}
       MW_DB_NAME: ${MW_DB_NAME}
