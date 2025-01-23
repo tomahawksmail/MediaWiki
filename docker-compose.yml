@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  mediawiki:
+  mediawiki-1.43.0:
     image: mediawiki:latest
     deploy:
       replicas: 1
@@ -21,7 +21,7 @@ services:
       MW_DB_USER: ${MW_DB_USER}
       MW_DB_PASSWORD: ${MW_DB_PASSWORD}
     volumes:
-      - /mnt/nfs/shared/wiki/app:/var/www/html
+      - /mnt/nfs/shared/wiki/html:/var/www/html
 
 volumes:
   images:
