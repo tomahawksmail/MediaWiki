@@ -1,7 +1,7 @@
 version: '3'
 services:
   mediawiki:
-    image: mediawiki
+    image: mediawiki:stable-fpm
     restart: always
     ports:
       - 5546:80
