@@ -4,10 +4,10 @@ services:
   mediawiki-1.43.0:
     image: mediawiki:latest
     deploy:
-      replicas: 1
-      placement:
-        constraints:
-          - node.hostname == masterswarm
+      replicas: 3
+#      placement:
+#        constraints:
+#          - node.hostname == masterswarm
       resources:
         limits:
           cpus: "1"
