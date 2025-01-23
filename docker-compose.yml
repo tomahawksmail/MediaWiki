@@ -13,7 +13,7 @@ services:
       MW_DB_USER: ${MW_DB_USER}
       MW_DB_PASSWORD: ${MW_DB_PASSWORD}
     volumes:
-      - /mnt/nfs/shared/wiki/app:/var/www/html/images
+      - /mnt/nfs/shared/wiki/app:/var/www/html
       # Uncomment the following line after initial setup:
       # - ./LocalSettings.php:/var/www/html/LocalSettings.php
 
