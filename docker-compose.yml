@@ -1,7 +1,7 @@
 version: '3'
 services:
   mediawiki:
-    image: mediawiki:stable-fpm
+    image: mediawiki:latest
     restart: always
     ports:
       - 5546:80
@@ -20,6 +20,6 @@ services:
 volumes:
   images:
 
-networks:
-  wiki_net:
-    external: true
+#networks:
+#  wiki_net:
+#    external: true
