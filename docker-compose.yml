@@ -5,8 +5,8 @@ services:
     restart: always
     ports:
       - 5546:80
-    networks:
-      - wiki_net
+#    networks:
+#      - wiki_net
     environment:
       MW_DB_HOST: ${MW_DB_HOST}
       MW_DB_NAME: ${MW_DB_NAME}
